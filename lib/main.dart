@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-void main() => runApp(new MyApp()); 
+import 'nextpage.dart';
+import 'ImageDemo.dart';
+import 'textmain4.3.dart';
 
-class MyApp extends StatelessWidget{
+void main() => runApp(new MaterialApp(
+  title: "首页",
+  home: new HomePage(),
+)); 
+
+class HomePage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return new MaterialApp(
-      title: "demo",
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text("dasfadf"),
-        ),
-        body: new Center(
-          child: new RaisedButton(
-            onPressed: (){
-              const url = "https://www.baidu.com";
-              launch(url);
-            },
-            child: new Text("BaiDu"),
-          ),
+    return new Scaffold(
+      appBar: new AppBar(
+        title: Text("FUCK"),
+      ),
+      body: new Center(
+        child: new RaisedButton(
+          child: new Text("target"),
+          onPressed: (){
+            Navigator.push(context, new MaterialPageRoute(builder: (context) => new TextMain()));
+          },
         ),
       ),
     );
   }
-}
 
+}
