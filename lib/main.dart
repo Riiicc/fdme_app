@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'nextpage.dart';
 import 'ImageDemo.dart';
 import 'textmain4.3.dart';
+import 'icontest.dart';
+import 'iconbutton.dart';
 
 void main() => runApp(new MaterialApp(
   title: "首页",
@@ -19,7 +21,7 @@ class HomePage extends StatelessWidget{
         child: new RaisedButton(
           child: new Text("target"),
           onPressed: (){
-            Navigator.push(context, new MaterialPageRoute(builder: (context) => new TextMain()));
+            Navigator.push(context, new MaterialPageRoute(builder: (context) => new ButtonDemo()));
           },
         ),
       ),
