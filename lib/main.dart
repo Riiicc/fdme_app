@@ -4,6 +4,10 @@ import 'ImageDemo.dart';
 import 'textmain4.3.dart';
 import 'icontest.dart';
 import 'iconbutton.dart';
+import 'rasisedbutton.dart';
+import 'listtext.dart';
+import '4.5.2.dart';
+import 'longlist.dart';
 
 void main() => runApp(new MaterialApp(
   title: "首页",
@@ -21,11 +25,17 @@ class HomePage extends StatelessWidget{
         child: new RaisedButton(
           child: new Text("target"),
           onPressed: (){
-            Navigator.push(context, new MaterialPageRoute(builder: (context) => new ButtonDemo()));
+            // Navigator.push(context, new MaterialPageRoute(builder: (context) => new shuiList()));
+            Navigator.push(context, new MaterialPageRoute(builder: (context) => new LongList(
+              items:new List<String>.generate(500, (i) => "$Item $i")
+            )));
           },
         ),
       ),
     );
   }
 
+}
+
+class Item {
 }
