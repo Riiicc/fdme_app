@@ -9,6 +9,8 @@ import 'listtext.dart';
 import '4.5.2.dart';
 import 'longlist.dart';
 
+import 'zhang4/ContainerTest.dart';
+
 void main() => runApp(new MaterialApp(
   title: "首页",
   home: new HomePage(),
@@ -25,10 +27,10 @@ class HomePage extends StatelessWidget{
         child: new RaisedButton(
           child: new Text("target"),
           onPressed: (){
-            // Navigator.push(context, new MaterialPageRoute(builder: (context) => new shuiList()));
-            Navigator.push(context, new MaterialPageRoute(builder: (context) => new LongList(
-              items:new List<String>.generate(500, (i) => "$Item $i")
-            )));
+            Navigator.push(context, new MaterialPageRoute(builder: (context) => new containerApp()));
+            // Navigator.push(context, new MaterialPageRoute(builder: (context) => new LongList(
+            //   items:new List<String>.generate(500, (i) => "$Item $i")
+            // )));
           },
         ),
       ),
